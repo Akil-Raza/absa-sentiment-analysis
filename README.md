@@ -59,17 +59,21 @@ labeled (sentence, aspect term, polarity) examples.
 6. **Business insights** — roll aspect-level predictions up into 6 categories (Food Quality, Service, Price/Value, Ambience, Drinks, Location/Wait), compute mention volume, sentiment mix, and a net sentiment score (`%positive − %negative`) per category
 7. **Conclusions & limitations**
 
-## Results (classical baseline, on the held-out test set)
+## Results (held-out test set)
 
 | Model | Accuracy | Macro F1 |
 |---|---|---|
 | Logistic Regression (TF-IDF) | 0.704 | 0.590 |
 | Linear SVM (TF-IDF) | 0.709 | 0.577 |
+| DistilBERT (fine-tuned, 3 epochs, Colab T4 GPU) | **0.814** | **0.704** |
 
-Both models do well on the majority `positive` class (F1 ≈ 0.83) but
-struggle on `neutral` (F1 ≈ 0.35–0.38) — a known hard case in ABSA, and the
-main motivation for the transformer stage. Fill in the transformer numbers
-after running `src/transformer_model.py` in Colab.
+The classical baselines do well on the majority `positive` class (F1 ≈ 0.83)
+but struggle on `neutral` (F1 ≈ 0.35–0.38) — a known hard case in ABSA.
+Fine-tuning DistilBERT closes much of that gap, lifting macro-F1 from ~0.59
+to 0.704, confirming that contextual embeddings handle negation and
+aspect-specific context better than TF-IDF bag-of-words features. There's
+still headroom before matching published DeBERTa-based SOTA on this
+benchmark (~82–86% accuracy / ~75–80 macro-F1) — see Limitations.
 
 ## How to run
 
