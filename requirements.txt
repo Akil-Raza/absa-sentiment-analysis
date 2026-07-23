@@ -1,0 +1,16 @@
+# Core (classical pipeline + notebook — runs on any laptop, no GPU needed)
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+matplotlib>=3.7
+seaborn>=0.13
+nltk>=3.8
+jupyter>=1.0
+nbformat>=5.9
+
+# Transformer pipeline (src/transformer_model.py) — run in Google Colab / Kaggle with GPU
+transformers>=4.40
+datasets>=2.19
+evaluate>=0.4
+accelerate>=0.30
+torch>=2.2

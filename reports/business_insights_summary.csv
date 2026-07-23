@@ -1,0 +1,8 @@
+aspect_category,mentions,pct_positive,pct_neutral,pct_negative,net_sentiment_score
+Food Quality,518,65.1,18.7,16.2,48.8
+Other,279,64.5,21.9,13.6,50.9
+Service,179,60.9,7.3,31.8,29.1
+Ambience,71,81.7,7.0,11.3,70.4
+Drinks,54,61.1,35.2,3.7,57.4
+Price/Value,11,54.5,0.0,45.5,9.1
+Location/Wait,8,62.5,12.5,25.0,37.5
