@@ -107,4 +107,4 @@ jupyter notebook notebooks/ABSA_Business_Insights.ipynb
 
 ## Author
 
-Akil — B.Tech Artificial Intelligence, Mumbai
+Akil Raza - 
