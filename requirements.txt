@@ -8,6 +8,10 @@ nltk>=3.8
 jupyter>=1.0
 nbformat>=5.9
 
+# Dashboard (app.py) — deployable on Streamlit Community Cloud
+streamlit>=1.38
+plotly>=5.20
+
 # Transformer pipeline (src/transformer_model.py) — run in Google Colab / Kaggle with GPU
 transformers>=4.40
 datasets>=2.19
